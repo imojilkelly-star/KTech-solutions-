@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KTech Solutions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b1120;
+    color:#fff;
+    line-height:1.6;
+}
+
+header{
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00c3ff;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00c3ff;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(135deg,#111827,#1e3a8a);
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#00c3ff;
+    color:#fff;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#0099cc;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    text-align:center;
+    color:#00c3ff;
+    margin-bottom:30px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#00c3ff;
+    margin-bottom:10px;
+}
+
+.about p,
+.contact p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:20px;
+}
+
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">KTech Solutions</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+<h1>Welcome to KTech Solutions</h1>
+
+<p>
+Cybersecurity • Artificial Intelligence • Website Development •
+IT Support • Graphic Design • Social Media Management
+</p>
+
+<a href="#contact" class="btn">Get Started</a>
+
+</section>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>Cybersecurity</h3>
+<p>Protect your business against cyber threats and attacks.</p>
+</div>
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Modern AI solutions that improve productivity.</p>
+</div>
+
+<div class="card">
+<h3>Website Development</h3>
+<p>Responsive business websites and online stores.</p>
+</div>
+
+<div class="card">
+<h3>IT Support</h3>
+<p>Professional computer and network support services.</p>
+</div>
+
+<div class="card">
+<h3>Graphic Design</h3>
+<p>Creative logos, posters, flyers and branding.</p>
+</div>
+
+<div class="card">
+<h3>Social Media Management</h3>
+<p>Grow your brand with effective social media marketing.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About KTech Solutions</h2>
+
+<p>
+KTech Solutions is a technology company providing Cybersecurity,
+Artificial Intelligence, Website Development, IT Support,
+Graphic Design, and Social Media Management services.
+We help businesses and organizations grow through innovative,
+secure, and reliable technology solutions.
+</p>
+
+</section>
+
+<section id="contact">
+<p><strong>Email:</strong> info@ktechsolutions.co.ke</p>
+<p><strong>Phone:</strong> +254 140 297 915</p>
+<p><strong>Location:</strong> Nairobi, Kenya</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 KTech Solutions. All Rights Reserved.</p>
+
+</footer>
+
+<a class="whatsapp-btn"
+href="https://wa.me/254140297915"
+target="_blank">
+WhatsApp
+</a>
+
+</body>
+</html>
