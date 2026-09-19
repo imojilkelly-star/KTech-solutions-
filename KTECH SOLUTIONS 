@@ -245,11 +245,27 @@ section {
 
 
 /* =========================
-   SERVICES
+   CLICKABLE SERVICE CARDS
 ========================= */
 
+.service-link {
+    display: block;
+}
+
 .service-card {
-    min-height: 210px;
+    min-height: 230px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.service-card:hover {
+    border-color: #00c3ff;
 }
 
 
@@ -325,54 +341,6 @@ section {
 
 
 /* =========================
-   PORTFOLIO DETAILS
-========================= */
-
-.details {
-    background: #0f172a;
-}
-
-.detail-box {
-
-    background: #111827;
-
-    border: 1px solid #263348;
-
-    border-radius: 15px;
-
-    padding: 30px;
-
-    margin-bottom: 25px;
-}
-
-.detail-box h3 {
-
-    color: #00c3ff;
-
-    font-size: 24px;
-
-    margin-bottom: 15px;
-}
-
-.detail-box p {
-
-    color: #cbd5e1;
-}
-
-.detail-box ul {
-
-    padding-left: 22px;
-
-    color: #cbd5e1;
-}
-
-.detail-box li {
-
-    margin: 8px 0;
-}
-
-
-/* =========================
    ABOUT
 ========================= */
 
@@ -413,6 +381,14 @@ section {
     margin: 10px 0;
 }
 
+.contact-info a {
+    color: #7dd3fc;
+}
+
+.contact-info a:hover {
+    color: #00c3ff;
+}
+
 
 /* =========================
    WHATSAPP
@@ -437,6 +413,8 @@ section {
     border-radius: 30px;
 
     font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 
@@ -455,6 +433,10 @@ footer {
     border-top: 1px solid #263348;
 
     color: #9ca3af;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 
@@ -494,6 +476,11 @@ footer {
         font-size: 2.5rem;
     }
 
+    .service-card {
+
+        min-height: 220px;
+    }
+
 }
 
 </style>
@@ -511,13 +498,13 @@ footer {
 
 <div class="navbar">
 
-<a href="#home" class="logo">
+<a href="index.html" class="logo">
 KTech Solutions
 </a>
 
 <nav>
 
-<a href="#home">Home</a>
+<a href="index.html">Home</a>
 
 <a href="#services">Services</a>
 
@@ -594,7 +581,18 @@ professionals, businesses and organizations.
 <div class="grid">
 
 
+<!-- =========================
+     IT SUPPORT
+========================= -->
+
+<a
+href="it-support.html"
+class="service-link"
+>
+
 <div class="card service-card">
+
+<div>
 
 <h3>
 💻 IT Support & Training
@@ -610,8 +608,27 @@ and technology training.
 
 </div>
 
+<span class="view-button">
+Explore IT Support →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- =========================
+     CYBERSECURITY
+========================= -->
+
+<a
+href="cybersecurity.html"
+class="service-link"
+>
 
 <div class="card service-card">
+
+<div>
 
 <h3>
 🔐 Cybersecurity
@@ -627,8 +644,27 @@ working practices.
 
 </div>
 
+<span class="view-button">
+Explore Cybersecurity →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- =========================
+     AI
+========================= -->
+
+<a
+href="ai-digital.html"
+class="service-link"
+>
 
 <div class="card service-card">
+
+<div>
 
 <h3>
 🤖 AI & Digital Productivity
@@ -644,8 +680,27 @@ use of AI.
 
 </div>
 
+<span class="view-button">
+Explore AI →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- =========================
+     WEBSITE DEVELOPMENT
+========================= -->
+
+<a
+href="web-development.html"
+class="service-link"
+>
 
 <div class="card service-card">
+
+<div>
 
 <h3>
 🌐 Website Development
@@ -661,8 +716,27 @@ professionals and projects.
 
 </div>
 
+<span class="view-button">
+Explore Websites →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- =========================
+     SOCIAL MEDIA
+========================= -->
+
+<a
+href="social-media.html"
+class="service-link"
+>
 
 <div class="card service-card">
+
+<div>
 
 <h3>
 📱 Social Media Management
@@ -677,8 +751,27 @@ online visibility and social media support.
 
 </div>
 
+<span class="view-button">
+Explore Social Media →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- =========================
+     NETWORKING
+========================= -->
+
+<a
+href="networking.html"
+class="service-link"
+>
 
 <div class="card service-card">
+
+<div>
 
 <h3>
 📡 Networking & Connectivity
@@ -693,6 +786,14 @@ installation assistance and troubleshooting.
 
 </div>
 
+<span class="view-button">
+Explore Networking →
+</span>
+
+</div>
+
+</a>
+
 
 </div>
 
@@ -705,7 +806,10 @@ installation assistance and troubleshooting.
      ABOUT
 ========================= -->
 
-<section class="about" id="about">
+<section
+class="about"
+id="about"
+>
 
 <div class="container">
 
@@ -755,8 +859,8 @@ KTech Solutions Portfolio
 
 <p class="section-description">
 
-Click any portfolio area below to view
-its detailed information.
+Explore our areas of work, skills, training
+and technology projects.
 
 </p>
 
@@ -764,9 +868,11 @@ its detailed information.
 <div class="grid">
 
 
-<!-- IT SUPPORT -->
+<!-- =========================
+     IT SUPPORT PORTFOLIO
+========================= -->
 
-<a href="#it-support">
+<a href="it-support.html">
 
 <div class="card portfolio-card">
 
@@ -810,9 +916,11 @@ View IT Support →
 </a>
 
 
-<!-- CYBERSECURITY -->
+<!-- =========================
+     CYBERSECURITY PORTFOLIO
+========================= -->
 
-<a href="#cybersecurity">
+<a href="cybersecurity.html">
 
 <div class="card portfolio-card">
 
@@ -856,9 +964,11 @@ View Cybersecurity →
 </a>
 
 
-<!-- AI -->
+<!-- =========================
+     AI PORTFOLIO
+========================= -->
 
-<a href="#ai">
+<a href="ai-digital.html">
 
 <div class="card portfolio-card">
 
@@ -902,9 +1012,11 @@ View AI Portfolio →
 </a>
 
 
-<!-- WEBSITE DEVELOPMENT -->
+<!-- =========================
+     WEBSITE PORTFOLIO
+========================= -->
 
-<a href="#web-development">
+<a href="web-development.html">
 
 <div class="card portfolio-card">
 
@@ -948,9 +1060,11 @@ View Web Development →
 </a>
 
 
-<!-- SOCIAL MEDIA -->
+<!-- =========================
+     SOCIAL MEDIA PORTFOLIO
+========================= -->
 
-<a href="#social-media">
+<a href="social-media.html">
 
 <div class="card portfolio-card">
 
@@ -994,9 +1108,11 @@ View Social Media →
 </a>
 
 
-<!-- NETWORKING -->
+<!-- =========================
+     NETWORKING PORTFOLIO
+========================= -->
 
-<a href="#networking">
+<a href="networking.html">
 
 <div class="card portfolio-card">
 
@@ -1048,379 +1164,13 @@ View Networking →
 
 
 <!-- =========================
-     PORTFOLIO DETAILS
-========================= -->
-
-<section class="details">
-
-<div class="container">
-
-
-<!-- IT SUPPORT -->
-
-<div class="detail-box" id="it-support">
-
-<h3>
-💻 IT Support & Training
-</h3>
-
-<p>
-
-KTech Solutions provides practical IT support
-and digital skills training to help users
-solve technology problems and work effectively.
-
-</p>
-
-<br>
-
-<ul>
-
-<li>
-Computer and user support
-</li>
-
-<li>
-Basic technical troubleshooting
-</li>
-
-<li>
-Digital literacy training
-</li>
-
-<li>
-Microsoft Office support
-</li>
-
-<li>
-Staff technology training
-</li>
-
-<li>
-Internet and digital service support
-</li>
-
-</ul>
-
-<a
-href="#portfolio"
-class="btn"
->
-Back to Portfolio
-</a>
-
-</div>
-
-
-<!-- CYBERSECURITY -->
-
-<div class="detail-box" id="cybersecurity">
-
-<h3>
-🔐 Cybersecurity Awareness
-</h3>
-
-<p>
-
-Cybersecurity awareness helps individuals
-and organizations recognize common digital
-risks and adopt safer technology practices.
-
-</p>
-
-<br>
-
-<ul>
-
-<li>
-Phishing and scam awareness
-</li>
-
-<li>
-Password and account security
-</li>
-
-<li>
-Safe internet browsing
-</li>
-
-<li>
-Device security awareness
-</li>
-
-<li>
-Digital privacy
-</li>
-
-<li>
-Data protection awareness
-</li>
-
-</ul>
-
-<a
-href="#portfolio"
-class="btn"
->
-Back to Portfolio
-</a>
-
-</div>
-
-
-<!-- AI -->
-
-<div class="detail-box" id="ai">
-
-<h3>
-🤖 AI & Digital Productivity
-</h3>
-
-<p>
-
-KTech Solutions explores practical ways
-AI and digital tools can support learning,
-productivity, communication and everyday work.
-
-</p>
-
-<br>
-
-<ul>
-
-<li>
-AI awareness
-</li>
-
-<li>
-Responsible AI use
-</li>
-
-<li>
-AI-assisted writing
-</li>
-
-<li>
-Content creation support
-</li>
-
-<li>
-Research and learning
-</li>
-
-<li>
-Digital productivity workflows
-</li>
-
-</ul>
-
-<a
-href="#portfolio"
-class="btn"
->
-Back to Portfolio
-</a>
-
-</div>
-
-
-<!-- WEBSITE DEVELOPMENT -->
-
-<div class="detail-box" id="web-development">
-
-<h3>
-🌐 Website Development
-</h3>
-
-<p>
-
-KTech Solutions develops responsive websites
-for businesses, professionals and digital projects.
-
-</p>
-
-<br>
-
-<ul>
-
-<li>
-HTML5 website development
-</li>
-
-<li>
-CSS styling and responsive design
-</li>
-
-<li>
-Business websites
-</li>
-
-<li>
-Portfolio websites
-</li>
-
-<li>
-GitHub repositories
-</li>
-
-<li>
-GitHub Pages deployment
-</li>
-
-</ul>
-
-<br>
-
-<h3>
-Featured Project
-</h3>
-
-<p>
-
-KTech Solutions official website and
-portfolio project.
-
-</p>
-
-<a
-href="https://imojilkelly-star.github.io/KTech-solutions-/"
-target="_blank"
-class="btn"
->
-View Live Website →
-</a>
-
-<a
-href="#portfolio"
-class="btn"
->
-Back to Portfolio
-</a>
-
-</div>
-
-
-<!-- SOCIAL MEDIA -->
-
-<div class="detail-box" id="social-media">
-
-<h3>
-📱 Social Media Management
-</h3>
-
-<p>
-
-KTech Solutions supports businesses and
-professionals with digital communication
-and online visibility.
-
-</p>
-
-<br>
-
-<ul>
-
-<li>
-Social media content planning
-</li>
-
-<li>
-Professional captions
-</li>
-
-<li>
-Business communication
-</li>
-
-<li>
-Online visibility
-</li>
-
-<li>
-Technology-focused content
-</li>
-
-<li>
-Social media management support
-</li>
-
-</ul>
-
-<a
-href="#portfolio"
-class="btn"
->
-Back to Portfolio
-</a>
-
-</div>
-
-
-<!-- NETWORKING -->
-
-<div class="detail-box" id="networking">
-
-<h3>
-📡 Networking & Connectivity
-</h3>
-
-<p>
-
-KTech Solutions provides basic networking
-and internet connectivity support.
-
-</p>
-
-<br>
-
-<ul>
-
-<li>
-Internet installation assistance
-</li>
-
-<li>
-Basic network troubleshooting
-</li>
-
-<li>
-Connectivity checks
-</li>
-
-<li>
-Wi-Fi support
-</li>
-
-<li>
-Device and network support
-</li>
-
-<li>
-Identifying connectivity problems
-</li>
-
-</ul>
-
-<a
-href="#portfolio"
-class="btn"
->
-Back to Portfolio
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<!-- =========================
      CONTACT
 ========================= -->
 
-<section class="contact" id="contact">
+<section
+class="contact"
+id="contact"
+>
 
 <div class="container">
 
@@ -1442,18 +1192,71 @@ Let's discuss your technology needs.
 <div class="contact-info">
 
 <p>
+
 📧 <strong>Email:</strong>
+
+<a href="mailto:info@ktechsolutions.co.ke">
+
 info@ktechsolutions.co.ke
+
+</a>
+
 </p>
 
+
 <p>
+
 📞 <strong>Phone:</strong>
+
+<a href="tel:+254140297915">
+
 +254 140 297 915
+
+</a>
+
 </p>
 
+
 <p>
+
 📍 <strong>Location:</strong>
+
 Nairobi, Kenya
+
+</p>
+
+
+<p>
+
+💻 <strong>GitHub:</strong>
+
+<a
+href="https://github.com/imojilkelly-star/KTech-solutions-"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+KTech Solutions GitHub
+
+</a>
+
+</p>
+
+
+<p>
+
+🔗 <strong>LinkedIn:</strong>
+
+<a
+href="https://www.linkedin.com/in/kelly-imojil-813079328/"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+Kelly Imojil
+
+</a>
+
 </p>
 
 </div>
@@ -1463,16 +1266,21 @@ Nairobi, Kenya
 href="mailto:info@ktechsolutions.co.ke"
 class="btn"
 >
+
 Email KTech Solutions
+
 </a>
 
 
 <a
 href="https://wa.me/254140297915"
 target="_blank"
+rel="noopener noreferrer"
 class="btn"
 >
+
 WhatsApp KTech
+
 </a>
 
 </div>
@@ -1481,15 +1289,18 @@ WhatsApp KTech
 
 
 <!-- =========================
-     WHATSAPP FLOATING BUTTON
+     FLOATING WHATSAPP
 ========================= -->
 
 <a
 href="https://wa.me/254140297915"
 target="_blank"
+rel="noopener noreferrer"
 class="whatsapp"
 >
+
 WhatsApp
+
 </a>
 
 
