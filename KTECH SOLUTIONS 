@@ -4,380 +4,334 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KTech Solutions | Technology & Digital Solutions</title>
+<title>KTech Solutions | IT, AI, Cybersecurity & Digital Solutions</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-html{
-    scroll-behavior:smooth;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+    line-height: 1.7;
 }
 
-body{
-    background:#0b1120;
-    color:#fff;
-    line-height:1.6;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-header{
-    background:#111827;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 10%;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 15px rgba(0,0,0,.25);
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111827;
+    border-bottom: 1px solid #263348;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#00c3ff;
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav{
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
+.logo {
+    color: #00c3ff;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-nav a{
-    color:#fff;
-    text-decoration:none;
-    margin-left:20px;
-    transition:.3s;
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-nav a:hover{
-    color:#00c3ff;
+nav a {
+    color: #e5e7eb;
+    font-size: 15px;
 }
 
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    text-align:center;
-    padding:110px 20px;
-    background:linear-gradient(135deg,#111827,#1e3a8a);
+nav a:hover {
+    color: #00c3ff;
 }
 
-.hero h1{
-    font-size:48px;
-    margin-bottom:20px;
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #111827, #1e3a8a);
 }
 
-.hero p{
-    font-size:20px;
-    max-width:900px;
-    margin:0 auto 30px;
-    color:#e5e7eb;
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 70px 20px;
 }
 
-.btn{
-    display:inline-block;
-    background:#00c3ff;
-    color:#06111f;
-    padding:13px 25px;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
-    transition:.3s;
+.badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid #00c3ff;
+    border-radius: 30px;
+    color: #7dd3fc;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.btn:hover{
-    background:#fff;
-    transform:translateY(-2px);
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    color: white;
+    max-width: 850px;
+    margin-bottom: 20px;
 }
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-section{
-    padding:75px 10%;
+.hero p {
+    max-width: 800px;
+    color: #dbeafe;
+    font-size: 19px;
 }
 
-h2{
-    text-align:center;
-    color:#00c3ff;
-    margin-bottom:40px;
-    font-size:36px;
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #00c3ff;
+    color: #06111d;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* =========================
-   SERVICES
-========================= */
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.btn:hover {
+    background: white;
+    transform: translateY(-2px);
 }
 
-.card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-    transition:.3s;
-    border:1px solid transparent;
+/* SECTIONS */
+
+section {
+    scroll-margin-top: 80px;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#00c3ff;
+.section-title {
+    color: #00c3ff;
+    font-size: 34px;
+    margin-bottom: 12px;
 }
 
-.card h3{
-    color:#00c3ff;
-    margin-bottom:10px;
+.section-description {
+    color: #b7c0ce;
+    max-width: 800px;
+    margin-bottom: 35px;
 }
 
-.card p{
-    color:#d1d5db;
+/* SERVICE CARDS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
 }
 
-/* =========================
-   ABOUT
-========================= */
-
-.about p{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    color:#ddd;
+.card {
+    background: #111827;
+    border: 1px solid #263348;
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.3s;
 }
 
-/* =========================
-   PORTFOLIO
-========================= */
-
-.portfolio-intro{
-    max-width:800px;
-    margin:-10px auto 40px;
-    text-align:center;
-    color:#ddd;
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #00c3ff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.card h3 {
+    color: white;
+    margin-bottom: 10px;
 }
 
-.portfolio-card{
-    background:#111827;
-    border:1px solid rgba(0,195,255,.15);
-    border-radius:12px;
-    overflow:hidden;
-    transition:.3s ease;
+.card p {
+    color: #b7c0ce;
 }
 
-.portfolio-card:hover{
-    transform:translateY(-8px);
-    border-color:#00c3ff;
-    box-shadow:0 10px 30px rgba(0,195,255,.12);
+/* PORTFOLIO */
+
+.portfolio-card {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-.portfolio-icon{
-    height:150px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:65px;
-    background:linear-gradient(135deg,#111827,#1e3a8a);
+.portfolio-card h3 {
+    font-size: 20px;
 }
 
-.portfolio-content{
-    padding:25px;
+.view-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 14px;
+    background: #00c3ff;
+    color: #06111d;
+    border-radius: 7px;
+    font-weight: bold;
+    text-align: center;
 }
 
-.portfolio-category{
-    color:#00c3ff;
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:1px;
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
 }
 
-.portfolio-content h3{
-    margin:10px 0;
-    color:#fff;
-    font-size:22px;
+.tag {
+    background: #172033;
+    border: 1px solid #2b3a50;
+    color: #93c5fd;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
 }
 
-.portfolio-content p{
-    color:#ccc;
-    font-size:15px;
-    margin-bottom:18px;
+/* PORTFOLIO DETAILS */
+
+.details {
+    background: #0f172a;
 }
 
-.portfolio-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:7px;
-    margin-bottom:20px;
+.detail-box {
+    background: #111827;
+    border: 1px solid #263348;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
 }
 
-.portfolio-tags span{
-    background:#1e293b;
-    color:#00c3ff;
-    padding:5px 9px;
-    border-radius:5px;
-    font-size:12px;
+.detail-box h3 {
+    color: #00c3ff;
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-.portfolio-btn{
-    display:inline-block;
-    background:#00c3ff;
-    color:#06111f;
-    padding:10px 17px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:14px;
-    transition:.3s;
+.detail-box ul {
+    padding-left: 22px;
+    color: #cbd5e1;
 }
 
-.portfolio-btn:hover{
-    background:#fff;
+.detail-box li {
+    margin: 8px 0;
 }
 
-.portfolio-cta{
-    text-align:center;
-    margin-top:50px;
-    padding:35px 20px;
-    background:#111827;
-    border-radius:12px;
-    border:1px solid rgba(0,195,255,.15);
+/* ABOUT */
+
+.about {
+    background: #0f172a;
 }
 
-.portfolio-cta h3{
-    color:#fff;
-    margin-bottom:10px;
-    font-size:24px;
+.about p {
+    max-width: 850px;
+    color: #cbd5e1;
+    font-size: 17px;
 }
 
-.portfolio-cta p{
-    color:#ccc;
-    margin-bottom:20px;
+/* CONTACT */
+
+.contact {
+    background: #111827;
 }
 
-/* =========================
-   CONTACT
-========================= */
-
-.contact p{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    color:#ddd;
-    margin-bottom:15px;
+.contact-info {
+    margin-top: 20px;
+    color: #cbd5e1;
+    font-size: 17px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#111827;
-    text-align:center;
-    padding:20px;
-    color:#cbd5e1;
+.contact-info p {
+    margin: 10px 0;
 }
 
-/* =========================
-   WHATSAPP
-========================= */
+/* WHATSAPP */
 
-.whatsapp-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    padding:15px 20px;
-    border-radius:50px;
-    font-weight:bold;
-    z-index:1001;
-    box-shadow:0 5px 20px rgba(0,0,0,.3);
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    background: #25D366;
+    color: #062b13;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* FOOTER */
 
-@media(max-width:700px){
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #080d18;
+    border-top: 1px solid #263348;
+    color: #9ca3af;
+}
 
-    header{
-        padding:15px 5%;
-        flex-direction:column;
-        gap:12px;
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
     }
 
-    nav{
-        justify-content:center;
+    nav {
+        justify-content: center;
+        gap: 12px;
     }
 
-    nav a{
-        margin:4px 8px;
-        font-size:14px;
+    .hero {
+        min-height: 600px;
     }
 
-    .hero{
-        padding:80px 20px;
+    .container {
+        padding: 55px 18px;
     }
 
-    .hero h1{
-        font-size:36px;
-    }
-
-    .hero p{
-        font-size:17px;
-    }
-
-    section{
-        padding:60px 5%;
-    }
-
-    h2{
-        font-size:30px;
-    }
-
-    .portfolio-grid{
-        grid-template-columns:1fr;
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
 }
-
 </style>
-
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
+<div class="navbar">
 
-<div class="logo">
+<a href="#home" class="logo">
 KTech Solutions
-</div>
+</a>
 
 <nav>
 <a href="#home">Home</a>
@@ -387,83 +341,104 @@ KTech Solutions
 <a href="#contact">Contact</a>
 </nav>
 
+</div>
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
+<div class="container">
+
+<span class="badge">
+IT • CYBERSECURITY • AI • DIGITAL SOLUTIONS
+</span>
+
 <h1>
-Welcome to KTech Solutions
+Technology Solutions That Help People and Businesses Work Smarter
 </h1>
 
 <p>
-Cybersecurity • Artificial Intelligence • Website Development •
-IT Support • Graphic Design • Social Media Management
+KTech Solutions provides practical IT support, cybersecurity awareness,
+AI and digital productivity guidance, website development, networking,
+social media management and digital skills training.
 </p>
 
 <a href="#portfolio" class="btn">
-View Our Work
+Explore Our Portfolio
 </a>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- ================= SERVICES ================= -->
 
 <section id="services">
 
-<h2>
+<div class="container">
+
+<h2 class="section-title">
 Our Services
 </h2>
 
-<div class="services-grid">
+<p class="section-description">
+We provide technology and digital solutions for individuals,
+professionals, businesses and organizations.
+</p>
+
+<div class="grid">
 
 <div class="card">
-<h3>Cybersecurity</h3>
+<h3>💻 IT Support & Training</h3>
 <p>
-Protect your business against cyber threats and attacks.
+Technical support, troubleshooting, computer assistance,
+digital literacy and staff technology training.
 </p>
 </div>
 
 <div class="card">
-<h3>Artificial Intelligence</h3>
+<h3>🔐 Cybersecurity</h3>
 <p>
-Modern AI solutions that improve productivity.
+Cybersecurity awareness, online safety, account protection
+and safer digital working practices.
 </p>
 </div>
 
 <div class="card">
-<h3>Website Development</h3>
+<h3>🤖 AI & Digital Productivity</h3>
 <p>
-Responsive business websites and online stores.
+Practical AI awareness, productivity tools, digital learning
+and responsible use of AI technologies.
 </p>
 </div>
 
 <div class="card">
-<h3>IT Support</h3>
+<h3>🌐 Website Development</h3>
 <p>
-Professional computer and network support services.
+Responsive websites and professional online presence
+for businesses and individuals.
 </p>
 </div>
 
 <div class="card">
-<h3>Graphic Design</h3>
+<h3>📱 Social Media Management</h3>
 <p>
-Creative logos, posters, flyers and branding.
+Content support, professional communication and online
+visibility for businesses and organizations.
 </p>
 </div>
 
 <div class="card">
-<h3>Social Media Management</h3>
+<h3>📡 Networking & Connectivity</h3>
 <p>
-Grow your brand with effective social media marketing.
+Internet connectivity support, basic networking,
+installation assistance and troubleshooting.
 </p>
+</div>
+
 </div>
 
 </div>
@@ -471,340 +446,548 @@ Grow your brand with effective social media marketing.
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ================= ABOUT ================= -->
 
-<section id="about" class="about">
+<section class="about" id="about">
 
-<h2>
+<div class="container">
+
+<h2 class="section-title">
 About KTech Solutions
 </h2>
 
 <p>
-KTech Solutions is a technology company providing Cybersecurity,
-Artificial Intelligence, Website Development, IT Support,
-Graphic Design, and Social Media Management services.
-We help businesses and organizations grow through innovative,
-secure, and reliable technology solutions.
+KTech Solutions is a technology-focused initiative providing practical
+IT and digital solutions. Our focus includes IT support, cybersecurity
+awareness, artificial intelligence, website development, networking,
+social media management and digital skills training.
 </p>
+
+<br>
+
+<p>
+Our goal is to help individuals and organizations understand technology,
+solve technical challenges and use digital tools more effectively.
+</p>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     PORTFOLIO
-========================= -->
+<!-- ================= PORTFOLIO ================= -->
 
 <section id="portfolio">
 
-<h2>
-Our Portfolio
+<div class="container">
+
+<h2 class="section-title">
+KTech Solutions Portfolio
 </h2>
 
-<p class="portfolio-intro">
-Explore some of the technology and digital solutions provided by
-KTech Solutions. We help individuals, businesses and organizations
-use technology effectively, securely and professionally.
+<p class="section-description">
+Click any portfolio area below to view its detailed information.
 </p>
 
 
-<div class="portfolio-grid">
-
-
-<!-- WEBSITE -->
-
-<div class="portfolio-card">
-
-<div class="portfolio-icon">
-🌐
-</div>
-
-<div class="portfolio-content">
-
-<span class="portfolio-category">
-WEB DEVELOPMENT
-</span>
-
-<h3>
-KTech Solutions Website
-</h3>
-
-<p>
-A responsive business website developed to establish
-an online presence and showcase KTech Solutions services.
-</p>
-
-<div class="portfolio-tags">
-<span>HTML</span>
-<span>CSS</span>
-<span>Web Design</span>
-</div>
-
-<a href="https://imojilkelly-star.github.io/KTech-solutions-/"
-class="portfolio-btn"
-target="_blank"
-rel="noopener">
-
-View Project
-
-</a>
-
-</div>
-
-</div>
+<div class="grid">
 
 
 <!-- IT SUPPORT -->
 
-<div class="portfolio-card">
+<a href="#it-support">
 
-<div class="portfolio-icon">
-💻
-</div>
+<div class="card portfolio-card">
 
-<div class="portfolio-content">
-
-<span class="portfolio-category">
-IT SUPPORT
-</span>
+<div>
 
 <h3>
-IT Support & Training
+💻 IT Support & Training
 </h3>
 
 <p>
-Practical IT support and digital skills training designed
-to help users understand technology and solve common
-technical challenges.
+IT support, troubleshooting, digital literacy and
+technology training.
 </p>
 
-<div class="portfolio-tags">
-<span>IT Support</span>
-<span>Training</span>
-<span>Digital Skills</span>
+<div class="tags">
+<span class="tag">IT Support</span>
+<span class="tag">Training</span>
+<span class="tag">Digital Skills</span>
 </div>
 
-<a href="#contact" class="portfolio-btn">
-Request Support
+</div>
+
+<span class="view-button">
+View IT Support →
+</span>
+
+</div>
+
 </a>
 
+
+<!-- CYBERSECURITY -->
+
+<a href="#cybersecurity">
+
+<div class="card portfolio-card">
+
+<div>
+
+<h3>
+🔐 Cybersecurity Awareness
+</h3>
+
+<p>
+Cybersecurity awareness, online safety and protection
+against common digital threats.
+</p>
+
+<div class="tags">
+<span class="tag">Cybersecurity</span>
+<span class="tag">Awareness</span>
+<span class="tag">Online Safety</span>
 </div>
+
+</div>
+
+<span class="view-button">
+View Cybersecurity →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- AI -->
+
+<a href="#ai">
+
+<div class="card portfolio-card">
+
+<div>
+
+<h3>
+🤖 AI & Digital Productivity
+</h3>
+
+<p>
+Practical AI awareness and digital productivity support
+for modern work and learning.
+</p>
+
+<div class="tags">
+<span class="tag">AI</span>
+<span class="tag">Productivity</span>
+<span class="tag">Digital Skills</span>
+</div>
+
+</div>
+
+<span class="view-button">
+View AI Portfolio →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- WEBSITE -->
+
+<a href="#web-development">
+
+<div class="card portfolio-card">
+
+<div>
+
+<h3>
+🌐 Website Development
+</h3>
+
+<p>
+Responsive business websites, portfolio websites and
+GitHub Pages projects.
+</p>
+
+<div class="tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">GitHub</span>
+</div>
+
+</div>
+
+<span class="view-button">
+View Web Development →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- SOCIAL MEDIA -->
+
+<a href="#social-media">
+
+<div class="card portfolio-card">
+
+<div>
+
+<h3>
+📱 Social Media Management
+</h3>
+
+<p>
+Digital content, business communication and online
+visibility support.
+</p>
+
+<div class="tags">
+<span class="tag">Social Media</span>
+<span class="tag">Content</span>
+<span class="tag">Branding</span>
+</div>
+
+</div>
+
+<span class="view-button">
+View Social Media →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- NETWORKING -->
+
+<a href="#networking">
+
+<div class="card portfolio-card">
+
+<div>
+
+<h3>
+📡 Networking & Connectivity
+</h3>
+
+<p>
+Internet connectivity, basic networking and
+technical troubleshooting.
+</p>
+
+<div class="tags">
+<span class="tag">Networking</span>
+<span class="tag">Internet</span>
+<span class="tag">Troubleshooting</span>
+</div>
+
+</div>
+
+<span class="view-button">
+View Networking →
+</span>
+
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PORTFOLIO DETAILS ================= -->
+
+<section class="details">
+
+<div class="container">
+
+
+<!-- IT SUPPORT -->
+
+<div class="detail-box" id="it-support">
+
+<h3>
+💻 IT Support & Training
+</h3>
+
+<p>
+KTech Solutions provides practical IT support and digital
+skills training to help users solve technology problems and
+work more effectively.
+</p>
+
+<br>
+
+<ul>
+<li>Computer and user support</li>
+<li>Basic technical troubleshooting</li>
+<li>Digital literacy training</li>
+<li>Microsoft Office support</li>
+<li>Staff technology training</li>
+<li>Internet and digital service support</li>
+</ul>
+
+<a href="#portfolio" class="btn">
+Back to Portfolio
+</a>
 
 </div>
 
 
 <!-- CYBERSECURITY -->
 
-<div class="portfolio-card">
-
-<div class="portfolio-icon">
-🔐
-</div>
-
-<div class="portfolio-content">
-
-<span class="portfolio-category">
-CYBERSECURITY
-</span>
+<div class="detail-box" id="cybersecurity">
 
 <h3>
-Cybersecurity Awareness
+🔐 Cybersecurity Awareness
 </h3>
 
 <p>
-Cybersecurity awareness and digital safety guidance
-covering phishing, password security, account protection
-and safer online practices.
+Cybersecurity awareness helps individuals and organizations
+recognize common digital risks and adopt safer technology practices.
 </p>
 
-<div class="portfolio-tags">
-<span>Cybersecurity</span>
-<span>Awareness</span>
-<span>Online Safety</span>
-</div>
+<br>
 
-<a href="#contact" class="portfolio-btn">
-Learn More
+<ul>
+<li>Phishing and scam awareness</li>
+<li>Password and account security</li>
+<li>Safe internet browsing</li>
+<li>Device security awareness</li>
+<li>Digital privacy</li>
+<li>Data protection awareness</li>
+</ul>
+
+<a href="#portfolio" class="btn">
+Back to Portfolio
 </a>
-
-</div>
 
 </div>
 
 
 <!-- AI -->
 
-<div class="portfolio-card">
-
-<div class="portfolio-icon">
-🤖
-</div>
-
-<div class="portfolio-content">
-
-<span class="portfolio-category">
-AI & TECHNOLOGY
-</span>
+<div class="detail-box" id="ai">
 
 <h3>
-AI & Digital Productivity
+🤖 AI & Digital Productivity
 </h3>
 
 <p>
-Helping individuals and organizations understand and
-use AI tools for productivity, learning, content creation
-and everyday digital work.
+KTech Solutions explores practical ways AI and digital tools
+can support learning, productivity, communication and everyday work.
 </p>
 
-<div class="portfolio-tags">
-<span>AI</span>
-<span>Productivity</span>
-<span>Digital Skills</span>
-</div>
+<br>
 
-<a href="#contact" class="portfolio-btn">
-Explore AI
+<ul>
+<li>AI awareness</li>
+<li>Responsible AI use</li>
+<li>AI-assisted writing</li>
+<li>Content creation support</li>
+<li>Research and learning</li>
+<li>Digital productivity workflows</li>
+</ul>
+
+<a href="#portfolio" class="btn">
+Back to Portfolio
 </a>
 
 </div>
+
+
+<!-- WEBSITE DEVELOPMENT -->
+
+<div class="detail-box" id="web-development">
+
+<h3>
+🌐 Website Development
+</h3>
+
+<p>
+KTech Solutions develops responsive websites for businesses,
+professionals and digital projects.
+</p>
+
+<br>
+
+<ul>
+<li>HTML5 website development</li>
+<li>CSS styling and responsive design</li>
+<li>Business websites</li>
+<li>Portfolio websites</li>
+<li>GitHub repositories</li>
+<li>GitHub Pages deployment</li>
+</ul>
+
+<br>
+
+<h3>
+Featured Project
+</h3>
+
+<p>
+KTech Solutions official website and portfolio project.
+</p>
+
+<a
+href="https://imojilkelly-star.github.io/KTech-solutions-/"
+target="_blank"
+class="btn"
+>
+View Live Website →
+</a>
+
+<a href="#portfolio" class="btn">
+Back to Portfolio
+</a>
 
 </div>
 
 
 <!-- SOCIAL MEDIA -->
 
-<div class="portfolio-card">
-
-<div class="portfolio-icon">
-📱
-</div>
-
-<div class="portfolio-content">
-
-<span class="portfolio-category">
-SOCIAL MEDIA
-</span>
+<div class="detail-box" id="social-media">
 
 <h3>
-Social Media Management
+📱 Social Media Management
 </h3>
 
 <p>
-Supporting businesses with social media content,
-online communication, digital visibility and audience
-engagement.
+KTech Solutions supports businesses and professionals with
+digital communication and online visibility.
 </p>
 
-<div class="portfolio-tags">
-<span>Social Media</span>
-<span>Content</span>
-<span>Marketing</span>
-</div>
+<br>
 
-<a href="#contact" class="portfolio-btn">
-Work With Us
+<ul>
+<li>Social media content planning</li>
+<li>Professional captions</li>
+<li>Business communication</li>
+<li>Online visibility</li>
+<li>Technology-focused content</li>
+<li>Social media management support</li>
+</ul>
+
+<a href="#portfolio" class="btn">
+Back to Portfolio
 </a>
-
-</div>
 
 </div>
 
 
 <!-- NETWORKING -->
 
-<div class="portfolio-card">
-
-<div class="portfolio-icon">
-📡
-</div>
-
-<div class="portfolio-content">
-
-<span class="portfolio-category">
-NETWORKING
-</span>
+<div class="detail-box" id="networking">
 
 <h3>
-Networking & Connectivity
+📡 Networking & Connectivity
 </h3>
 
 <p>
-Basic networking, Wi-Fi, internet connectivity and
-troubleshooting support to help users and businesses
-stay connected.
+KTech Solutions provides basic networking and internet
+connectivity support.
 </p>
 
-<div class="portfolio-tags">
-<span>Networking</span>
-<span>Wi-Fi</span>
-<span>Internet</span>
-</div>
+<br>
 
-<a href="#contact" class="portfolio-btn">
-Request Support
+<ul>
+<li>Internet installation assistance</li>
+<li>Basic network troubleshooting</li>
+<li>Connectivity checks</li>
+<li>Wi-Fi support</li>
+<li>Device and network support</li>
+<li>Identifying connectivity problems</li>
+</ul>
+
+<a href="#portfolio" class="btn">
+Back to Portfolio
 </a>
 
 </div>
 
-</div>
-
-</div>
-
-
-<!-- CTA -->
-
-<div class="portfolio-cta">
-
-<h3>
-Have a Technology Project?
-</h3>
-
-<p>
-Let's work together to turn your technology needs
-into practical digital solutions.
-</p>
-
-<a href="#contact" class="btn">
-Contact KTech Solutions
-</a>
 
 </div>
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- ================= CONTACT ================= -->
 
-<section id="contact" class="contact">
+<section class="contact" id="contact">
 
-<h2>
-Contact Us
+<div class="container">
+
+<h2 class="section-title">
+Contact KTech Solutions
 </h2>
 
+<p class="section-description">
+Need IT support, cybersecurity awareness, AI guidance,
+website development, networking or social media support?
+Let's discuss your technology needs.
+</p>
+
+<div class="contact-info">
+
 <p>
-<strong>Email:</strong>
+📧 <strong>Email:</strong>
 info@ktechsolutions.co.ke
 </p>
 
 <p>
-<strong>Phone:</strong>
+📞 <strong>Phone:</strong>
 +254 140 297 915
 </p>
 
 <p>
-<strong>Location:</strong>
+📍 <strong>Location:</strong>
 Nairobi, Kenya
 </p>
+
+</div>
+
+<a
+href="mailto:info@ktechsolutions.co.ke"
+class="btn"
+>
+Email KTech Solutions
+</a>
+
+<a
+href="https://wa.me/254140297915"
+target="_blank"
+class="btn"
+>
+WhatsApp KTech
+</a>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- ================= WHATSAPP ================= -->
+
+<a
+href="https://wa.me/254140297915"
+target="_blank"
+class="whatsapp"
+>
+WhatsApp
+</a>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -812,19 +995,11 @@ Nairobi, Kenya
 © 2026 KTech Solutions. All Rights Reserved.
 </p>
 
+<p>
+IT Support • Cybersecurity • AI • Websites • Networking • Digital Solutions
+</p>
+
 </footer>
-
-
-<!-- WHATSAPP -->
-
-<a class="whatsapp-btn"
-href="https://wa.me/254140297915"
-target="_blank"
-rel="noopener">
-
-WhatsApp
-
-</a>
 
 </body>
 </html>
